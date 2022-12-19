@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #000;
+    --primary-font: 'PT Serif', serif;
+    --secundary-font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    margin: 8em auto;
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.header__description {
+    font-family: var(--secundary-font);
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.header__description--title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header__description--text {
+    font-size: 1.2em;
+    line-height: 27px;
+    width: 430px;
+}
+
+.main {
+    margin-top: 8em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10em;
+}
+
+.main__member--card:nth-of-type(3n + 2) {
+    margin-top: 8em;
+}
+
+.main__member--card--image {
+    display: flex;
+}
+
+.main__member--card--image img{
+    max-width: 238px;
+}
+
+.main__member--card--figcaption {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: .8em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding-left: 5px;
+}
+
+.main__member--card--description--name {
+    font-family: var(--secundary-font);
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 1110px) {
+
+    body {
+        margin: 4em auto;
+    }
+
+    .header__description--text {
+        font-size: 1em;
+        line-height: 27px;
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 2em;
+        margin: 4em 2em;
+    }
+
+    .main {
+        margin: 8em 0;
+        gap: 3em;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .main__member--card {
+        width: 40%;
+    }
+
+    .main__member--card--figcaption {
+        font-size: 10px;
+    }
+
+    .main__member--card--description--name {
+        font-size: 14px;
+    }
+
+    .main__member--card:nth-of-type(odd) {
+        margin-top: -3em;
+        margin-left: 25px;
+    }
+
+    .main__member--card:last-child {
+        margin-top: 3em;
+    }
+
+    .main__member--card:nth-of-type(3n + 2) {
+        margin-top: 0;
+    }
+
+    .main__member--card--image img{
+        max-width: 70%;
+    }
+
+}
